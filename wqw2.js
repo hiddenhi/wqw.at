@@ -117,7 +117,7 @@ f.style.height="55px";
 f.style.margin="0 0 0 0";
 //document.body.
 
-this.parentNode.appendChild(f);
+parentNode.appendChild(f);
 var iframe = window.frames[d];
 iframe.document.open();
 iframe.document.write(base64.decode(base));
