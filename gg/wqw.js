@@ -129,7 +129,9 @@ script.parentNode.appendChild(f);
 var text=script.innerText;
 var url=text.match(/\[url\](\S*)\[\/url\]/)[1];
 var image=text.match(/\[image\](\S*)\[\/image\]/)[1];
-var host=window.location.protocol;
+//var host=window.location.protocol;
+//var q4=image.substring(0,4).toUpperCase();
+//if(q4=="HTTP"){}else{image=host+image;}
 var iframe = window.frames[d];
 iframe.document.open();
 iframe.document.write(base64.decode(base));
