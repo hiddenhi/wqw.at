@@ -110,14 +110,10 @@ f.src="about:blank";
 f.style.border="medium none";
 f.style.width="260px";
 f.style.height="55px";
-//f.style.position="relative";
-//f.style.bottom="0";
-//f.style.left="50%";
-//f.style.transform="translateX(-50%)";
 f.style.margin="0 0 0 0";
-//document.body.
-
-parentNode.appendChild(f);
+var scripts = document.getElementsByTagName('script');
+script = scripts[scripts.length - 1];
+script.parentNode.appendChild(f);
 var iframe = window.frames[d];
 iframe.document.open();
 iframe.document.write(base64.decode(base));
