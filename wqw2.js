@@ -115,7 +115,9 @@ f.style.height="55px";
 //f.style.left="50%";
 //f.style.transform="translateX(-50%)";
 f.style.margin="0 0 0 0";
-document.body.appendChild(f);
+//document.body.
+
+parentNode.appendChild(f);
 var iframe = window.frames[d];
 iframe.document.open();
 iframe.document.write(base64.decode(base));
