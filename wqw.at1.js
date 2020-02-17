@@ -122,7 +122,11 @@ iframe.document.close();
 var iid=document.getElementById(d).contentWindow.document;
 iid.getElementById("jqbz").style.background="url("+imagebase+") no-repeat center center";
 iid.getElementById("jqbz").style.backgroundSize="100% 100%";
-iid.getElementById("jqbz").onclick=function(){window.parent.location.href=url}
+iid.getElementById("jqbz").onclick=function(){
+//window.parent.location.href=url;
+
+window.location.href=url;
+}
 }
 
 addwqw(url,imagebase);
