@@ -1,0 +1,369 @@
+﻿<html>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0"/>
+<meta name="MobileOptimized" content="240"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<title>WQW.AT</title>
+
+<style>
+*{
+moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+color:#000000;
+}
+
+li a{color:#000;
+display:inline-block;
+height:50px;
+width:50px;
+color:#FFFFFF;
+line-height:50px; /* 设置垂直居中 */
+text-align: center;
+text-decoration : none
+}
+
+
+li{display:inline;}
+li:before{content:"";}
+
+:target ~ #end{
+display:none;
+}
+
+#list1,#list2,#list3,#list4,#list5,#list6 {display:none;}
+#list1:target,#list2:target,#list3:target,#list4:target,#list5:target,#list6:target{display:block;}
+
+
+/*点击菜单，选中状态效果*/
+  #list1:target ~ #header #navigation #link-home,
+  #list2:target ~ #header #navigation #link-portfolio,
+  #list3:target ~ #header #navigation #link-cpmfig,
+  #list4:target ~ #header #navigation #link-contact,
+  #list5:target ~ #header #navigation #link-infomation,
+  #list6:target ~ #header #navigation #link-about{
+background: #333;
+color: #fff;
+}
+
+
+#index{
+position:relative;
+height:50px;
+}
+
+
+
+#header,#navigation{
+left:0;
+text-align:center;
+	position:fixed; 
+	top:-20; 
+        bottom:;
+	width:100%; 
+	height: 50px; 
+	background: #1e87cc;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+*{
+moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+color:#000000;
+
+}
+
+a{text-decoration:none;color:#000000;}
+
+/*
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+      url('iconfont.woff2') format('woff2'),
+      url('iconfont.woff') format('woff'),
+      url('iconfont.ttf') format('truetype'),
+      url('iconfont.svg#iconfont') format('svg');
+}
+
+@font-face {font-family: 'webfont';
+  src: url('webfont.ttf');
+}
+*/
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 128px;
+  color:#FFFFFF;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.iconfont2 {
+  font-family: "webfont" !important;
+  font-size: 16px;
+  color:#FFFFFF;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+.it {
+  font-family: "iconfont";
+  font-style: normal;
+}
+
+
+
+/*w-error-popup-white*/
+.w-error-popup-white{ width: 100%; height: 100%; z-index: 999; position: fixed; left: 0; top:0;}
+.w-error-popup-white .w-error-back{ width: 100%; height: 100%; background-color: rgba(0,0,0,.8); position:fixed;  z-index: 1000; left: 0; top:0;}
+
+.w-error-popup-white .w-error-inner{border-radius:5px;/*是否圆角*/  background-color: #fff; width: 80%; top: 5%; left: 0%; margin-left: 0%;height:90%; text-align: center;  padding:  0; z-index: 1001; position: relative;}
+
+.w-error-popup-white .w-error-inner h4{ font-size: 20px; color: #333; padding: 16px 0; margin: 0 32px; border-bottom: 1px solid #e5e9ec; font-weight: normal; }
+.w-error-popup-white .w-error-inner .w-error-content{ color: #333; font-size: 16px; line-height: 20px; padding: 16px; height: 100px; overflow-y:auto; overflow-x:hidden; text-align: left;  }
+.w-close{ background: url(../images/result-error-x.png) no-repeat right 16px; float: right; right:18px; top:0; position:absolute; z-index: 999; width: 100px; height:20px; cursor:pointer; display: block; background-size:60%;}
+
+
+/*u-btn */
+.u-btn{ padding: 5px 40px; background-color: #92c153; border-bottom: 5px solid #1e87dd; border-radius: 8px; color: #000; display: inline-block; vertical-align: middle;}
+
+.u-btn-red{ background-color: #1e87cc; border-color: #1e87AA;height:50px;line-height: 50px;}
+img{margin:2px;border-radius:10px;width:90%;height:auto;}
+</style>
+
+
+
+<script src="jquery.min.js"></script>
+
+
+
+
+<div>
+
+<!-- 所有页面都共享alert提示框   -->
+<div align="center">
+<div id="w-alert-popup-white" style="display: none;"
+class="w-error-popup-white">
+<div class="w-error-back"></div>
+<div class="w-error-inner">
+<div class="btn" style="padding: 1rem; text-align:right;top:0%;">
+<a cla="u-btn u-btn-red" href="javascript:alertHide();">Ｘ</a>
+</div>
+<div id="w-alert-content" class="w-error-content" style="height: auto;">
+这是提示内容
+</div>
+</div>
+</div>
+</div>
+
+
+
+<xmp id="pipai" style="display:none">
+
+<div id="s23">
+暂无<span id="my1"></span><br>
+</div>
+<div id="jieshou">
+暂无
+</div>
+
+
+</xmp>
+
+
+
+    <script>
+        function removeTags(tagName,tagClass){
+            var tagElements = document.getElementsByTagName( tagName );
+            for( var m = 0 ; m < tagElements.length ; m++ ){
+                if( tagElements[m].className == tagClass ){
+                    tagElements[m].parentNode.removeChild( tagElements[m] );
+                }
+            }
+        }
+
+        function removeJS(tagName,tagClass){
+            var tagElements = document.getElementsByTagName( tagName );
+
+            for( var m = 0 ; m < tagElements.length ; m++ ){
+                     var zzr=tagElements[m].src;
+                if( zzr.indexOf("hangzhou.goeasy.io") != -1 ){
+                    tagElements[m].parentNode.removeChild( tagElements[m] );
+                }
+            }
+
+        }
+
+
+    </script>
+
+
+<script type="text/javascript">
+
+
+function cx(str){
+$("#w-alert-content").html(str);
+$("#w-alert-popup-white").show();
+}
+
+function alertHide(){
+$("#w-alert-popup-white").hide();
+}
+
+
+
+function mmy(){
+cx("<div align='center'>"+pipai.innerText+"</div>")
+}
+
+function myword(){
+quxiaody=2;
+cx("<div align='center'>"+"暂无"+"</div>")
+}
+
+
+document.oncontextmenu=function(e){
+//或者return false;
+e.preventDefault();
+};
+
+
+
+</script>
+
+
+
+
+
+
+<div id="index"></div>
+
+<!-- 工具 -->
+<div id="list1" class="content">
+工具<br>
+<a href="https://www.107000.com">107000工具站</a><br>
+<a href="https://www.sojson.com">sojson在线</a><br>
+<a href="https://www.sojson.com/jsobfuscator.html">js加密(最牛加密)-他自己说的</a>
+</div>
+<!-- 工具结束 -->
+
+<!-- 广告 -->
+<div id="list2" class="panel">
+广告插件<br>
+功能如下：<br>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/jqbbg.png[/image]
+[url]http://www.nnwcz.com/41?invitecode=30004799[/url]
+</script>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/qianka.jpg[/image]
+[url]https://dawangde.me//?u=67998009&referer_code=bc87e230cd[/url]
+</script>
+<br>
+代码：<br>
+<xmp>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/jqbbg.png[/image]
+[url]http://www.nnwcz.com/41?invitecode=30004799[/url]
+</script>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/qianka.jpg[/image]
+[url]https://dawangde.me//?u=67998009&referer_code=bc87e230cd[/url]
+</script>
+</xmp>
+<br>
+说明：<br>
+图片规格长宽比例应为4.8:1<br>
+[image]与[/image]中间填写图片的URL地址<br>
+[url]与[/url]中间填写点击广告图片后需要跳转的地址<br>
+</div>
+<!-- 广告结束 -->
+
+<!-- 搜索 -->
+<div id="list3" class="panel">
+暂未开放搜索功能
+<button onclick="mmy()">搜</button>
+<button onclick="myword()">my</button>
+</div>
+<!-- 搜索结束 -->
+
+
+<!-- 关于 -->
+<div id="list4" class="panel">
+联系wqw.at：<br>
+QQ:1336621774<br>
+Email:1336621774@qq.com
+</div>
+<!-- 关于结束 -->
+
+<div id="end" class="panel">
+wqw.at创立的目的是为用户收集好用的工具<br>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/jqbbg.png[/image]
+[url]http://www.nnwcz.com/41?invitecode=30004799[/url]
+</script>
+<br>
+<script src="https://wqw.at/wqw/wqw.js">
+[image]https://m.epanf.com/if/page/qianka.jpg[/image]
+[url]https://dawangde.me//?u=67998009&referer_code=bc87e230cd[/url]
+</script>
+</div>
+
+
+
+<div id="header">
+<ul id="navigation">
+     <li><a id="link" href="#1">首页</a></li>
+     <li><a id="link-home" href="#list1">工具</a></li>
+     <li><a id="link-portfolio" href="#list2">广告</a></li>
+     <li><a id="link-cpmfig" href="#list3">搜索</a></li>
+     <li><a id="link-contact" href="#list4">关于</a></li>
+
+</ul>
+</div>
+
+
+
+
+
